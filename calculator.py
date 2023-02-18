@@ -3,6 +3,7 @@ import os
 
 print("Welcome to the calculator!")
 print("Current version: 1.1")
+
 numb1 = float(input("Please enter your first number: "))
 os.system('cls')
 print("Operations below:")
@@ -63,7 +64,5 @@ elif symbol == '**':
     print(f"{numb1} raised to the power of {numb2} is {math}.")
     input("Press {enter} to exit.")
     exit()
-
-else:
-    print("Invalid operation, try again.")
-    exit()
+print("Invalid operation, try again.")
+input('Press {enter} to exit.')
