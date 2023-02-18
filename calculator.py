@@ -1,13 +1,9 @@
 import math
 import os
-import time
 
 print("Welcome to the calculator!")
 print("Current version: 1.1")
-print("Previous versions + code: https://github.com/beanpython1/calculator.git")
-time.sleep(3)
-
-os.sytem('cls')
+os.system('cls')
 numb1 = float(input("Please enter your first number: "))
 os.system('cls')
 print("Operations below:")
