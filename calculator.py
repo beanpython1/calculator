@@ -3,7 +3,6 @@ import os
 
 print("Welcome to the calculator!")
 print("Current version: 1.1")
-os.system('cls')
 numb1 = float(input("Please enter your first number: "))
 os.system('cls')
 print("Operations below:")
