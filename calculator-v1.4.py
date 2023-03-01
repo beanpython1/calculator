@@ -4,7 +4,7 @@ import os
 print("Welcome to the calculator!")
 print("Current version: 1.3")
 try: 
-    numb1 = input("Please enter your first number or enter '#' for percentage calculator: ")
+    numb1 = input("Please enter your first number or enter '#' for percentage calculator (HCF does not recognise this number, so type in a random one.): ")
     if numb1 == "#":
         os.system('cls')
         ask = input("Enter 'd' to calculate the percentage of a decimal or type 'p' to calculate the percentage of an amount. ").lower()
@@ -139,19 +139,20 @@ try:
             input("Press enter to exit.")
             exit()
         elif symbol.lower() == "hcf":
+            numbers = input("Enter your numbers with a comma seperating them (no spaces): ")
             try:
-                numb2 = int(input("What do you want the second number to be? "))
-                numb1 = int(numb1)
+                numb = [int(num) for num in numbers.split(',')]
             except ValueError:
-                input("Invalid value, press enter to exit.")
-                exit()
-            try:
-                a = math.gcd(numb1,numb2)
+                print("Invalid operation, try again.")
+                input('Press enter to exit.')     
+            try: 
+                a = math.gcd(*numb)
+                test = numbers.replace(',',', ')
             except ValueError:
-                input("Invalid value, press enter to exit.")
-                exit()
+                print("Invalid operation, try again.")
+                input('Press enter to exit.')     
             os.system('cls')
-            print(f'The highest common factor of {numb1} and {numb2} is {a}.')
+            print(f'The HCF of {test} is {a}.')
             input("Press enter to exit.")
             exit()
         print("Invalid operation, try again.")
