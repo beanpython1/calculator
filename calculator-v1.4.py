@@ -36,6 +36,25 @@ try:
         else:
             input("Invalid value. Press enter to exit.")
             exit()
+    elif numb1 == 'admin':
+        os.system('cls')
+        print("Hello. Enter your username and password below.")
+        name = input("Username:")
+        password = input("Password: ")
+        if name == 'bean':
+            if password == 'Bean123':
+                os.system('cls')
+                print("Hello again bean. Admin granted.")
+                print("Admin page: https://newskit.social/articles/admin_")
+                input("Press enter to exit.")
+                exit()
+            else:
+                input("Incorrect password, press enter to exit.")
+                exit()
+        else:
+            print("Invalid username.")
+            input("Press enter to exit.")
+            exit()
     else: 
         numb1 = float(numb1)
         os.system('cls')
@@ -150,7 +169,10 @@ try:
                 test = numbers.replace(',',', ')
             except ValueError:
                 print("Invalid operation, try again.")
-                input('Press enter to exit.')     
+                input('Press enter to exit.') 
+            except OverflowError:
+                int("Invalid operation, try again.")
+                input('Press enter to exit.')       
             os.system('cls')
             print(f'The HCF of {test} is {a}.')
             input("Press enter to exit.")
