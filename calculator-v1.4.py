@@ -36,25 +36,6 @@ try:
         else:
             input("Invalid value. Press enter to exit.")
             exit()
-    elif numb1 == 'admin':
-        os.system('cls')
-        print("Hello. Enter your username and password below.")
-        name = input("Username:")
-        password = input("Password: ")
-        if name == 'bean':
-            if password == 'Bean123':
-                os.system('cls')
-                print("Hello again bean. Admin granted.")
-                print("Admin page: https://newskit.social/articles/admin_")
-                input("Press enter to exit.")
-                exit()
-            else:
-                input("Incorrect password, press enter to exit.")
-                exit()
-        else:
-            print("Invalid username.")
-            input("Press enter to exit.")
-            exit()
     else: 
         numb1 = float(numb1)
         os.system('cls')
